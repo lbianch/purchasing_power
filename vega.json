@@ -1,0 +1,98 @@
+{
+  "axes": [
+    {
+      "scale": "x",
+      "title": "Farms",
+      "type": "x"
+    },
+    {
+      "scale": "y",
+      "title": "Data",
+      "type": "y"
+    }
+  ],
+  "data": [
+    {
+      "name": "table",
+      "values": [
+        {
+          "col": "apples",
+          "idx": "Farm 1",
+          "val": 10
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 2",
+          "val": 15
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 3",
+          "val": 6
+        },
+        {
+          "col": "apples",
+          "idx": "Farm 4",
+          "val": 12
+        }
+      ]
+    }
+  ],
+  "height": 300,
+  "legends": [],
+  "marks": [
+    {
+      "from": {
+        "data": "table"
+      },
+      "properties": {
+        "enter": {
+          "width": {
+            "band": true,
+            "offset": -1,
+            "scale": "x"
+          },
+          "x": {
+            "field": "data.idx",
+            "scale": "x"
+          },
+          "y": {
+            "field": "data.val",
+            "scale": "y"
+          },
+          "y2": {
+            "scale": "y",
+            "value": 0
+          }
+        },
+        "update": {
+          "fill": {
+            "value": "steelblue"
+          }
+        }
+      },
+      "type": "rect"
+    }
+  ],
+  "scales": [
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.idx"
+      },
+      "name": "x",
+      "range": "width",
+      "type": "ordinal"
+    },
+    {
+      "domain": {
+        "data": "table",
+        "field": "data.val"
+      },
+      "name": "y",
+      "nice": true,
+      "range": "height"
+    }
+  ],
+  "width": 500
+}
